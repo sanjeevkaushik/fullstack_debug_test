@@ -16,18 +16,24 @@ cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install flask
+pip install flask-cors
 python app.py
 ```
 
 ### Frontend
 ```bash
-cd frontend
+
 npm create vite@latest frontend –template react
+Ignore existing files
+Select React and Javascript in the next steps
+Above steps create a default App.jsx, replace this file from the project App.jsx file
+
 npm install
-pip install flask-cors
 
 Add "start": "vite", in package-json in “scripts” section
 
+
+cd frontend
 npm start
 ```
 
