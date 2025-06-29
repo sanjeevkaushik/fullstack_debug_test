@@ -16,12 +16,12 @@ def get_feedback():
     sort = request.args.get("sort", "desc")
     query = "SELECT message, rating FROM feedback"
 
-    print(rating)
-    if rating != "null":
+
+    if rating != "null" and rating is not None:
         query += f" WHERE rating = ? "  # <-- Prepared statement
     query += f" ORDER BY created_at {sort}"
-    print(query)
-    if rating != "null":
+
+    if rating != "null" and rating is not None:
         feedback = cursor.execute(query, rating).fetchall()
     else:
         feedback = cursor.execute(query).fetchall()
