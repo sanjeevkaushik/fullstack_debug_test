@@ -22,7 +22,12 @@ python app.py
 ### Frontend
 ```bash
 cd frontend
+npm create vite@latest frontend –template react
 npm install
+pip install flask-cors
+
+Add "start": "vite", in package-json in “scripts” section
+
 npm start
 ```
 
